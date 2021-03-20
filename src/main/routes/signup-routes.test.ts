@@ -15,12 +15,13 @@ describe('Signup Routes', () => {
     const accountCollection = MongHelper.getCollection('accounts')
     await accountCollection.deleteMany({})
   })
+
   test('Should return an account on success', async () => {
     await request(app)
       .post('/api/signup')
       .send({
-        name: 'Kako',
-        email: 'kakoferrare87@gmail',
+        name: 'KakoFerare',
+        email: 'kakoferrare87@gmail.com',
         password: '123456',
         passwordConfirmation: '123456'
       })
